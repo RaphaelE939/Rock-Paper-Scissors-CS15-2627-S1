@@ -36,11 +36,9 @@ def check_winner(cpu_choice, player_choice):
             return "CPU"
 
     return None
-
 cpu_choice = get_cpu_choice()
 player_choice = get_player_choice()
 winner = check_winner(cpu_choice, player_choice)
 
 print(f"CPU chose: {cpu_choice}")
 print(f"You chose: {player_choice}")
-print(f"Winner: {winner}")

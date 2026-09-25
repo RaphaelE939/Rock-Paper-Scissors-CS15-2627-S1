@@ -60,19 +60,19 @@ def play_round():
 
     print(f"Player Score: {player_score}, Computer Score: {cpu_score}, Tie Score: {tie_score}")
     if player_score == 3 or cpu_score == 3:
-        return
+        return None
     if player_score > cpu_score:
         print("You are winning 👌👍")
     elif cpu_score > player_score:
         print("You are losing 😓😢")
     else:
         print("It's a tie so far 😐")
-    # I don't want it to show this when the player has won or lost.
-
+    return winner
 
 while True:
     play_round()
     if player_score == 3:
+        print("player wins")
         print("Tournament over, Player Wins!!")
         break
     elif cpu_score == 3:
